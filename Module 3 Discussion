@@ -1,0 +1,40 @@
+using System;
+
+namespace MyApplication
+{
+    class Bunny
+    {
+        public readonly string Name; 
+        public readonly bool LikesCarrots;
+		
+
+
+        public Bunny(string name)
+        {
+            Name = name;
+            LikesCarrots = true;
+			
+        }
+
+        
+        public Bunny(string name, bool LikesCarrots)
+        {
+            Name = name;
+            LikesCarrots = likesCarrots;
+			
+        }
+
+        static void Main(string[] args)
+        {
+            
+            Bunny myobject = new Bunny("Bo");
+            Console.WriteLine(myobject.Name); // Output: Bo
+            Console.WriteLine(myobject.LikesCarrots); // Output: Yes
+
+        
+            Bunny myobject2 = new Bunny("Bo");
+            Console.WriteLine(myobject2.Name); // Output: Bo
+            Console.WriteLine(myobject2.LikesCarrots); // Output: No
+        }
+    }
+}
