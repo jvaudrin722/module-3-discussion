@@ -2,39 +2,42 @@ using System;
 
 namespace MyApplication
 {
-    class Bunny
+    class B1Bunny
     {
-        public readonly string Name; 
+        public readonly string Name;
         public readonly bool LikesCarrots;
-		
+        public readonly bool LikesHumans;
 
-
-        public Bunny(string name)
+        
+        public B1Bunny(string name)
         {
             Name = name;
             LikesCarrots = true;
-			
+            LikesHumans = true;
         }
 
         
-        public Bunny(string name, bool LikesCarrots)
+        public B1Bunny(string name, bool likesCarrots, bool likesHumans)
         {
             Name = name;
             LikesCarrots = likesCarrots;
-			
+            LikesHumans = likesHumans;
         }
 
         static void Main(string[] args)
         {
-            
-            Bunny myobject = new Bunny("Bo");
-            Console.WriteLine(myobject.Name); // Output: Bo
-            Console.WriteLine(myobject.LikesCarrots); // Output: Yes
+           
+            B1Bunny myObject = new B1Bunny("Bo");
+            Console.WriteLine(myObject.Name); // Output: Bo
+            Console.WriteLine(myObject.LikesCarrots); // Output: True
+            Console.WriteLine(myObject.LikesHumans); // Output: True
 
-        
-            Bunny myobject2 = new Bunny("Bo");
-            Console.WriteLine(myobject2.Name); // Output: Bo
-            Console.WriteLine(myobject2.LikesCarrots); // Output: No
+            
+            B1Bunny myObject2 = new B1Bunny("Bo", false, false);
+            Console.WriteLine(myObject2.Name); // Output: Thumper
+            Console.WriteLine(myObject2.LikesCarrots); // Output: False
+            Console.WriteLine(myObject2.LikesHumans); // Output: False
         }
     }
 }
+
